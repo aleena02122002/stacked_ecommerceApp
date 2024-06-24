@@ -11,7 +11,7 @@ class HomeView extends StatelessWidget {
         viewModelBuilder: () => HomeViewmodel(),
         builder: (context, viewmodel, child) {
           return Scaffold(
-
+            backgroundColor: Colors.amber,
           );
         });
   }
