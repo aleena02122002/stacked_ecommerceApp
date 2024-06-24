@@ -1,3 +1,4 @@
+import 'package:e_commerce/app/app.router.dart';
 import 'package:e_commerce/register/register_viewmodel.dart';
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
@@ -95,14 +96,29 @@ class RegisterView extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Align(
-                        alignment: Alignment.centerRight,
-                        child: TextButton(
-                            onPressed: () {},
-                            child: const Text(
-                              "Forget Password",
-                              style: TextStyle(color: Color(0xFFF83758)),
-                            ))),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 25.0,vertical: 10),
+                      child: TextButton(
+                        onPressed: () {},
+                        child: RichText(
+                          text: TextSpan(
+                            text: "By Clicking the ",
+                            style: const TextStyle(color: Color(0xFF676767)), // Default text style
+                            children: <TextSpan>[
+                              TextSpan(
+                                text: "Register",
+                                style: TextStyle(color: Color(0xFFF83758)), // Different color for "Register"
+                              ),
+                              TextSpan(
+                                text: " button, you agree to the public offer",
+                                style: const TextStyle(color: Color(0xFF676767)), // Continue with default style
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+
                     const SizedBox(
                       height: 30,
                     ),
@@ -110,7 +126,9 @@ class RegisterView extends StatelessWidget {
                       height: 55,
                       width: 317,
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          viewmodel.navigationService.navigateToHomeView();
+                        },
                         child: Text(
                           "Register",
                           style: TextStyle(color: Colors.white, fontSize: 20),
@@ -128,7 +146,9 @@ class RegisterView extends StatelessWidget {
                         children: [
                           Text("Already have an account"),
                           TextButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                viewmodel.navigationService.navigateToLoginView();
+                              },
                               child: Text(
                                 "Login",
                                 style: TextStyle(color: Color(0xFFF83758)),

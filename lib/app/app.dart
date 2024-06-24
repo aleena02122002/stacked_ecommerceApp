@@ -5,8 +5,8 @@ import 'package:stacked/stacked_annotations.dart';
 import 'package:stacked_services/stacked_services.dart';
 
 @StackedApp(routes: [
-  MaterialRoute(page: LoginView,initial: true),
-  MaterialRoute(page: HomeView,initial: false),
+  MaterialRoute(page: LoginView,initial: false),
+  MaterialRoute(page: HomeView,initial: true),
   MaterialRoute(page: RegisterView,initial: false)
 ],
   dependencies: [

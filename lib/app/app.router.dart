@@ -14,9 +14,9 @@ import 'package:stacked/stacked.dart' as _i1;
 import 'package:stacked_services/stacked_services.dart' as _i6;
 
 class Routes {
-  static const loginView = '/';
+  static const loginView = '/login-view';
 
-  static const homeView = '/home-view';
+  static const homeView = '/';
 
   static const registerView = '/register-view';
 
