@@ -30,7 +30,7 @@ class HomeView extends StatelessWidget {
                       filled: true,
                       fillColor: Colors.white,
                       border: InputBorder.none,
-                      suffixIcon: Icon(Icons.mic, color: Colors.black),
+                      suffixIcon: Icon(Icons.mic),
                       prefixIcon: Icon(Icons.search)
                     ),
                   ),
@@ -38,11 +38,47 @@ class HomeView extends StatelessWidget {
               ),
               ),
                   Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                    padding: const EdgeInsets.symmetric(horizontal: 11.0,vertical: 8.0),
                     child: Row(
                       children: [
                         Text("All Featured",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),),
+                        SizedBox(width: 85,),
+                        Container(
+                          height: 30,
+                          width: 70,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(5),
+                              color: Colors.white
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                            child: Row(
+                              children: [
+                                Text("Sort"),
+                                Icon(Icons.compare_arrows)
+                              ],
+                            ),
+                          ),
+                        ),
+                        SizedBox(width: 10),
+                        Container(
+                          height: 30,
+                          width: 70,
 
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(5),
+                            color: Colors.white
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 5.0),
+                            child: Row(
+                              children: [
+                                Text("Filter"),
+                                Icon(Icons.filter_alt_outlined)
+                              ],
+                            ),
+                          ),
+                        )
                       ],
                     ),
                   )
