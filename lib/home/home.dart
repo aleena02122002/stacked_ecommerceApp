@@ -81,6 +81,21 @@ class HomeView extends StatelessWidget {
                         )
                       ],
                     ),
+                  ),
+                  SingleChildScrollView(
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                      child: Row(
+                        children: [
+                          Column(
+                            children: [
+                              Image(image: AssetImage("assets/images/beauty.png")),
+                              Text("Beauty"),
+                            ],
+                          )
+                        ],
+                      ),
+                    ),
                   )
                 ],
               ),
