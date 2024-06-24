@@ -92,6 +92,20 @@ class HomeView extends StatelessWidget {
                               Image(image: AssetImage("assets/images/beauty.png")),
                               Text("Beauty"),
                             ],
+                          ),
+                          SizedBox(width: 15),
+                          Column(
+                            children: [
+                              Image(image: AssetImage("assets/images/fashion.png")),
+                              Text("Fashion"),
+                            ],
+                          ),
+                          SizedBox(width: 15,),
+                          Column(
+                            children: [
+                              Image(image: AssetImage("assets/images/kids.png")),
+                              Text("Kids"),
+                            ],
                           )
                         ],
                       ),
