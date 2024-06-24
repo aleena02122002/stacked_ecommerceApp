@@ -1,6 +1,4 @@
-import 'package:e_commerce/app/app.dart';
 import 'package:e_commerce/home/home_viewmodel.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:stacked/stacked.dart';
 import 'package:flutter/material.dart';
 
@@ -15,13 +13,13 @@ class HomeView extends StatelessWidget {
           return SafeArea(
             child: Scaffold(
               appBar: AppBar(
-                title: Image(image: AssetImage("assets/images/logo.png")),
+                title: const Image(image: AssetImage("assets/images/logo.png")),
               ),
               body: Column(
                 children: [
               Container(
-              padding: EdgeInsets.symmetric(horizontal: 25,vertical: 5.0),
-              child: Center(
+              padding: const EdgeInsets.symmetric(horizontal: 25,vertical: 5.0),
+              child: const Center(
                 child: Flexible(
                   child: TextField(
 
@@ -41,8 +39,8 @@ class HomeView extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(horizontal: 11.0,vertical: 8.0),
                     child: Row(
                       children: [
-                        Text("All Featured",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),),
-                        SizedBox(width: 85,),
+                        const Text("All Featured",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),),
+                        const SizedBox(width: 85,),
                         Container(
                           height: 30,
                           width: 70,
@@ -50,8 +48,8 @@ class HomeView extends StatelessWidget {
                               borderRadius: BorderRadius.circular(5),
                               color: Colors.white
                           ),
-                          child: Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                          child: const Padding(
+                            padding: EdgeInsets.symmetric(horizontal: 8.0),
                             child: Row(
                               children: [
                                 Text("Sort"),
@@ -60,7 +58,7 @@ class HomeView extends StatelessWidget {
                             ),
                           ),
                         ),
-                        SizedBox(width: 10),
+                        const SizedBox(width: 10),
                         Container(
                           height: 30,
                           width: 70,
@@ -69,8 +67,8 @@ class HomeView extends StatelessWidget {
                             borderRadius: BorderRadius.circular(5),
                             color: Colors.white
                           ),
-                          child: Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 5.0),
+                          child: const Padding(
+                            padding: EdgeInsets.symmetric(horizontal: 5.0),
                             child: Row(
                               children: [
                                 Text("Filter"),
@@ -82,32 +80,53 @@ class HomeView extends StatelessWidget {
                       ],
                     ),
                   ),
-                  SingleChildScrollView(
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                      child: Row(
-                        children: [
-                          Column(
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 12.0,horizontal: 10),
+                    child: Container(
+                      height: 80,
+                      color: Colors.white,
+                      child: const SingleChildScrollView(
+                        child: Padding(
+                          padding: EdgeInsets.symmetric(vertical: 5,horizontal: 10.0),
+                          child: Row(
                             children: [
-                              Image(image: AssetImage("assets/images/beauty.png")),
-                              Text("Beauty"),
+                              Column(
+                                children: [
+                                  Image(image: AssetImage("assets/images/beauty.png")),
+                                  Text("Beauty"),
+                                ],
+                              ),
+                              SizedBox(width: 15),
+                              Column(
+                                children: [
+                                  Image(image: AssetImage("assets/images/fashion.png")),
+                                  Text("Fashion"),
+                                ],
+                              ),
+                              SizedBox(width: 15,),
+                              Column(
+                                children: [
+                                  Image(image: AssetImage("assets/images/kids.png")),
+                                  Text("Kids"),
+                                ],
+                              ),
+                              SizedBox(width: 15,),
+                              Column(
+                                children: [
+                                  Image(image: AssetImage("assets/images/men.png")),
+                                  Text("Men"),
+                                ],
+                              ),
+                              SizedBox(width: 15,),
+                              Column(
+                                children: [
+                                  Image(image: AssetImage("assets/images/women.png")),
+                                  Text("Women"),
+                                ],
+                              ),
                             ],
                           ),
-                          SizedBox(width: 15),
-                          Column(
-                            children: [
-                              Image(image: AssetImage("assets/images/fashion.png")),
-                              Text("Fashion"),
-                            ],
-                          ),
-                          SizedBox(width: 15,),
-                          Column(
-                            children: [
-                              Image(image: AssetImage("assets/images/kids.png")),
-                              Text("Kids"),
-                            ],
-                          )
-                        ],
+                        ),
                       ),
                     ),
                   )
