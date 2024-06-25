@@ -129,7 +129,55 @@ class HomeView extends StatelessWidget {
                         ),
                       ),
                     ),
-                  )
+                  ),
+                  Container(
+                    child: Stack(
+                      children: <Widget>[
+                        Image.asset("assets/images/offer1.png"),
+                        Positioned(
+                          top: 50, // specify the position of the text
+                          left: 20,
+                          child: Column(
+                            children: [
+                              Text(
+                                "50-40% OFF",
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              Text("Now in (product)",style: TextStyle(color: Colors.white,fontSize: 12),),
+                              Text("All colours",style: TextStyle(color: Colors.white,fontSize: 12),),
+                              Padding(
+                                padding: const EdgeInsets.symmetric(vertical: 8.0),
+                                child: Container(
+                                  width: 101,
+                                  height: 32,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(6),
+                                    border: Border.all(
+                                      width: 1,
+                                      color: Colors.white,
+                                    )
+                                  ),
+                                  child: Padding(
+                                    padding: const EdgeInsets.symmetric(horizontal: 3.2),
+                                    child: Row(
+                                      children: [
+                                        Text("Shop Now",style: TextStyle(color: Colors.white),),
+                                        Icon(Icons.arrow_forward,color: Colors.white,)
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
                 ],
               ),
             ),
